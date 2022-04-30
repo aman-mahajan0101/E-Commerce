@@ -83,7 +83,6 @@ app.get("/", (req, res) => {
 const productRoutes = require("./routes/productRoutes");
 const authRoutes = require("./routes/authRoutes");
 const cartRoutes = require("./routes/cartRoutes");
-const payment = require("./routes/payment");
 
 //APIs
 const cartAPI = require("./routes/apis/cartAPI");
@@ -99,7 +98,6 @@ app.use("/products", productRoutes);
 app.use(authRoutes);
 app.use(cartRoutes);
 app.use(cartAPI);
-app.use(payment);
 app.use(likeProductApi);
 app.use(filterProductsApi);
 

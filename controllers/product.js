@@ -136,7 +136,7 @@ const searchProduct = async (req, res) => {
   const { query } = req.query;
   console.log(query);
   console.log(req.query);
-  const products = await Product.find({ name: query });
+  const products = await Product.find({ name: { $regex: query } });
   console.log(products);
   res.render("products/index", { products });
 };
